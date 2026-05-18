@@ -1,0 +1,238 @@
+*{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #0f1117;
+    color: white;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+
+    background: #181c24;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 50px;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #00bfff;
+}
+
+.banner{
+    width: 100%;
+
+    height: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 0 0 25px 25px;
+
+    box-shadow: 0 0 25px rgba(0,191,255,0.3);
+
+    border-bottom: 2px solid rgba(0,191,255,0.3);
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    opacity: 0;
+
+    transition: 1s;
+}
+
+.slide.active{
+    opacity: 1;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.dots{
+    position: absolute;
+
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 15px;
+
+    z-index: 100;
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+
+    opacity: 0.5;
+
+    transition: 0.3s;
+}
+
+.dot.active{
+    opacity: 1;
+
+    background: #00bfff;
+
+    box-shadow: 0 0 10px #00bfff;
+}
+
+.title{
+    text-align: center;
+
+    margin: 60px 0;
+
+    font-size: 40px;
+
+    color: #00bfff;
+
+    text-shadow: 0 0 10px #00bfff;
+}
+
+.products{
+    width: 90%;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-bottom: 80px;
+}
+
+.product{
+    width: 250px;
+
+    background: #1b2230;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition: 0.4s;
+
+    cursor: pointer;
+}
+
+.product img{
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.product h2{
+    margin-top: 15px;
+}
+
+.product p{
+    margin: 15px 0;
+
+    color: #00bfff;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.products:hover .product{
+    opacity: 0.3;
+    filter: brightness(40%);
+}
+
+.products .product:hover{
+    opacity: 1;
+
+    transform: scale(1.08);
+
+    filter: brightness(120%);
+
+    box-shadow: 0 0 25px #00bfff;
+}
+
+.about{
+    width: 80%;
+
+    margin: auto;
+
+    background: #1b2230;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    margin-bottom: 80px;
+}
+
+.about h2{
+    margin-bottom: 20px;
+    color: #00bfff;
+}
+
+.about p{
+    line-height: 1.8;
+    color: #ddd;
+}
+
+footer{
+    width: 100%;
+
+    background: #090b10;
+
+    padding: 30px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+footer h3{
+    color: #00bfff;
+    margin-bottom: 10px;
+}
