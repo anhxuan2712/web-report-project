@@ -50,12 +50,6 @@ body{
     height: 500px;
     position: relative;
     overflow: hidden;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
     border-bottom: 2px solid rgba(0,191,255,0.3);
 }
 
@@ -63,21 +57,10 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
-<<<<<<< HEAD
     top: 0;
     left: 0;
     opacity: 0;
     transition: opacity 1s ease;
-=======
-    opacity: 0;
-    transition: 1s;
-<<<<<<< HEAD
-=======
-    transition: 0.5s;
->>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
->>>>>>> 06e97272f38ff5dc9710790f52bff70fda04f3a2
-=======
->>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
 }
 
 .slide.active{
@@ -88,22 +71,6 @@ body{
 .slide img {
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    object-fit: contain;
-    object-position: center;
-    display: block;
-=======
-<<<<<<< HEAD
-    object-fit: cover;
-=======
-    object-fit: contain;
-    display: block;
->>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
->>>>>>> 06e97272f38ff5dc9710790f52bff70fda04f3a2
-=======
-    object-fit: cover;
->>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
 }
 .dots{
     position: absolute;
@@ -141,6 +108,7 @@ body{
 
 .products{
     width: 90%;
+    height: auto;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -153,15 +121,14 @@ body{
     background: #1b2230;
     border-radius: 15px;
     overflow: hidden;
-    text-align: center;
+    text-align: left;
     transition: 0.4s;
     cursor: pointer;
 }
 
 .product img{
     width: 100%;
-    height: 220px;
-
+    height: auto;
     object-fit: cover;
 }
 
