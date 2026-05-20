@@ -50,12 +50,6 @@ body{
     height: 500px;
     position: relative;
     overflow: hidden;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
     border-bottom: 2px solid rgba(0,191,255,0.3);
 }
 
@@ -63,21 +57,17 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
-<<<<<<< HEAD
+
     top: 0;
     left: 0;
     opacity: 0;
     transition: opacity 1s ease;
-=======
+
     opacity: 0;
     transition: 1s;
-<<<<<<< HEAD
-=======
+
     transition: 0.5s;
->>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
->>>>>>> 06e97272f38ff5dc9710790f52bff70fda04f3a2
-=======
->>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
+
 }
 
 .slide.active{
@@ -88,22 +78,6 @@ body{
 .slide img {
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    object-fit: contain;
-    object-position: center;
-    display: block;
-=======
-<<<<<<< HEAD
-    object-fit: cover;
-=======
-    object-fit: contain;
-    display: block;
->>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
->>>>>>> 06e97272f38ff5dc9710790f52bff70fda04f3a2
-=======
-    object-fit: cover;
->>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
 }
 .dots{
     position: absolute;
@@ -160,7 +134,7 @@ body{
 
 .product img{
     width: 100%;
-    height: 220px;
+    height: auto;
 
     object-fit: cover;
 }
@@ -171,13 +145,14 @@ body{
 
 .product p{
     margin: 15px 0;
-
-    color: #00bfff;
-
+    color:#00bfff;
     font-size: 20px;
     font-weight: bold;
 }
 
+.product .p1{
+    color:red;
+}
 .products:hover .product{
     opacity: 0.3;
     filter: brightness(40%);
@@ -210,7 +185,7 @@ body{
     color: #ddd;
 }
 
-footer{
+footer {
     width: 100%;
     background: #090b10;
     padding: 30px;
@@ -221,4 +196,15 @@ footer{
 footer h3{
     color: #00bfff;
     margin-bottom: 10px;
+}
+@media(max-width: 900px){
+
+    .products{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu{
+        gap: 15px;
+    }
 }
