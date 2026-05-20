@@ -23,6 +23,10 @@ body{
 
 .logo img{
     width: 100px;
+    display: flex;
+    justify-content: left;
+    
+    
 }
 
 .menu{
@@ -47,41 +51,60 @@ body{
     position: relative;
     overflow: hidden;
 <<<<<<< HEAD
-    border-radius: 0 0 25px 25px;
-    box-shadow: 0 0 25px rgba(0,191,255,0.3);
-    border-bottom: 2px solid rgba(0,191,255,0.3);
+<<<<<<< HEAD
 =======
-    background: black;
->>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
+<<<<<<< HEAD
+=======
+>>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
+    border-bottom: 2px solid rgba(0,191,255,0.3);
 }
 
 .slide{
     width: 100%;
     height: 100%;
     position: absolute;
-    opacity: 0;
 <<<<<<< HEAD
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+=======
+    opacity: 0;
     transition: 1s;
+<<<<<<< HEAD
 =======
     transition: 0.5s;
 >>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
+>>>>>>> 06e97272f38ff5dc9710790f52bff70fda04f3a2
+=======
+>>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
 }
 
 .slide.active{
     opacity: 1;
+    z-index: 1;
 }
 
-.slide img{
+.slide img {
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    object-fit: contain;
+    object-position: center;
+    display: block;
+=======
 <<<<<<< HEAD
     object-fit: cover;
 =======
     object-fit: contain;
     display: block;
 >>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
+>>>>>>> 06e97272f38ff5dc9710790f52bff70fda04f3a2
+=======
+    object-fit: cover;
+>>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
 }
-
 .dots{
     position: absolute;
     bottom: 20px;
