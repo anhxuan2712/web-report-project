@@ -51,16 +51,16 @@ body{
     position: relative;
     overflow: hidden;
 <<<<<<< HEAD
+<<<<<<< HEAD
     border-radius: 25px;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
     border-radius: 0 0 25px 25px;
     box-shadow: 0 0 25px rgba(0,191,255,0.3);
 >>>>>>> 06e97272f38ff5dc9710790f52bff70fda04f3a2
     border-bottom: 2px solid rgba(0,191,255,0.3);
-=======
-    background: black;
->>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
 }
 
 .slide{
@@ -74,12 +74,14 @@ body{
     transition: opacity 1s ease;
 =======
     opacity: 0;
-<<<<<<< HEAD
     transition: 1s;
+<<<<<<< HEAD
 =======
     transition: 0.5s;
 >>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
 >>>>>>> 06e97272f38ff5dc9710790f52bff70fda04f3a2
+=======
+>>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
 }
 
 .slide.active{
@@ -90,6 +92,7 @@ body{
 .slide img {
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
 <<<<<<< HEAD
     object-fit: contain;
     object-position: center;
@@ -103,6 +106,9 @@ body{
     display: block;
 >>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
 >>>>>>> 06e97272f38ff5dc9710790f52bff70fda04f3a2
+=======
+    object-fit: cover;
+>>>>>>> f7be51f99633d4eebb41fd365c379f3aca56a4e0
 }
 .dots{
     position: absolute;
