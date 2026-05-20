@@ -50,9 +50,17 @@ body{
     height: 500px;
     position: relative;
     overflow: hidden;
+<<<<<<< HEAD
+    border-radius: 25px;
+=======
+<<<<<<< HEAD
     border-radius: 0 0 25px 25px;
+    box-shadow: 0 0 25px rgba(0,191,255,0.3);
+>>>>>>> 06e97272f38ff5dc9710790f52bff70fda04f3a2
     border-bottom: 2px solid rgba(0,191,255,0.3);
+=======
     background: black;
+>>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
 }
 
 .slide{
@@ -70,6 +78,8 @@ body{
     transition: 1s;
 =======
     transition: 0.5s;
+>>>>>>> 569a49ecad448d8d181ce88d19b87581361b8c2a
+>>>>>>> 06e97272f38ff5dc9710790f52bff70fda04f3a2
 }
 
 .slide.active{
