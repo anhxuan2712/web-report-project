@@ -138,13 +138,14 @@ body{
 
 .product p{
     margin: 15px 0;
-
-    color: #00bfff;
-
+    color:#00bfff;
     font-size: 20px;
     font-weight: bold;
 }
 
+.product .p1{
+    color:red;
+}
 .products:hover .product{
     opacity: 0.3;
     filter: brightness(40%);
@@ -177,7 +178,7 @@ body{
     color: #ddd;
 }
 
-footer{
+footer {
     width: 100%;
     background: #090b10;
     padding: 30px;
@@ -188,4 +189,15 @@ footer{
 footer h3{
     color: #00bfff;
     margin-bottom: 10px;
+}
+@media(max-width: 900px){
+
+    .products{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu{
+        gap: 15px;
+    }
 }
