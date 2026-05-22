@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
 }
 
 body{
@@ -17,31 +17,30 @@ body{
     background: #181c24;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
+    align-items: center; 
+
 }
 
 .logo img{
     width: 100px;
-    display: flex;
-    justify-content: left;
-    
-    
 }
 
 .menu{
     display: flex;
     gap: 30px;
+    padding-right: 50px;
 }
 
 .menu a{
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     transition: 0.3s;
+    margin-left: 5px;
 }
 
-.menu a:hover{
+.menu a:hover,
+.menu a.active{
     color: #00bfff;
 }
 
