@@ -1,85 +1,52 @@
-let products = [
-    {
-        name: "iPhone 15",
-        category: "phone",
-        price: "20.000.000đ",
-        image: "images/iphone.jpg"
-    },
-    {
-        name: "Samsung S24",
-        category: "phone",
-        price: "18.000.000đ",
-        image: "images/samsung.jpg"
-    },
-    {
-        name: "MacBook Air",
-        category: "laptop",
-        price: "25.000.000đ",
-        image: "images/macbook.jpg"
-    },
-    {
-        name: "Dell XPS",
-        category: "laptop",
-        price: "22.000.000đ",
-        image: "images/dell.jpg"
-    },
-    {
-        name: "iPad Pro",
-        category: "tablet",
-        price: "17.000.000đ",
-        image: "images/ipad.jpg"
-    },
-    {
-        name: "Apple Watch",
-        category: "watch",
-        price: "9.000.000đ",
-        image: "images/watch.jpg"
-    }
+let SanPham = [
+    { ten: "iPhone 15", loai: "phone", gia: "20.000.000đ", anh: "../images/iphone.jpg" },
+    { ten: "Samsung S24", loai: "phone", gia: "18.000.000đ", anh: "../images/samsung.jpg" },
+    { ten: "MacBook Air", loai: "laptop", gia: "25.000.000đ", anh: "../images/macbook.jpg" },
+    { ten: "Dell XPS", loai: "laptop", gia: "22.000.000đ", anh: "../images/dell.jpg" },
+    { ten: "iPad Pro", loai: "tablet", gia: "17.000.000đ", anh: "../images/ipad.jpg" },
+    { ten: "Apple Watch", loai: "watch", gia: "9.000.000đ", anh: "../images/watch.jpg" }
 ];
 
-let currentCategory = "all";
+let LoaiDangChon = "all";
 
-function displayProducts(list) {
-    let productList = document.getElementById("product-list");
-    productList.innerHTML = "";
+function HienThi(ds) {
+    let box = document.getElementById("product-list");
+    box.innerHTML = "";
 
-    if (list.length === 0) {
-        productList.innerHTML = "<h2>Không tìm thấy sản phẩm</h2>";
+    if (ds.length == 0) {
+        box.innerHTML = "<h2>Không có sản phẩm</h2>";
         return;
     }
 
-    list.forEach(product => {
-        productList.innerHTML += `
-            <div class="product-card">
-                <img src="${product.image}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <p>${product.price}</p>
-                <button>Add to Cart</button>
-            </div>
-        `;
-    });
+    for (let i = 0; i < ds.length; i++) {
+        box.innerHTML +=
+        '<div class="product-card">' +
+            '<img src="' + ds[i].anh + '">' +
+            '<h3>' + ds[i].ten + '</h3>' +
+            '<p>' + ds[i].gia + '</p>' +
+            '<button>Add to Cart</button>' +
+        '</div>';
+    }
 }
 
-function filterProducts(category) {
-    currentCategory = category;
-    applyFilter();
+function filterProducts(loai) {
+    LoaiDangChon = loai;
+    HienThi(SanPham);
 }
 
 function searchProducts() {
-    applyFilter();
+    let tuKhoa = document.getElementById("searchBox").value.toLowerCase();
+    let KetQua = [];
+
+    for (let i = 0; i < SanPham.length; i++) {
+        if (
+            SanPham[i].ten.toLowerCase().includes(tuKhoa) &&
+            (LoaiDangChon == "all" || SanPham[i].loai == LoaiDangChon)
+        ) {
+            KetQua.push(SanPham[i]);
+        }
+    }
+
+    HienThi(KetQua);
 }
-
-function applyFilter() {
-    let keyword = document.getElementById("searchBox").value.toLowerCase();
-
-    let filteredProducts = products.filter(product => {
-        let matchName = product.name.toLowerCase().includes(keyword);
-        let matchCategory = currentCategory === "all" || product.category === currentCategory;
-
-        return matchName && matchCategory;
-    });
-
-    displayProducts(filteredProducts);
-}
-
-displayProducts(products);
+HienThi(SanPham);

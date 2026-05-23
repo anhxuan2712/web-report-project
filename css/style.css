@@ -189,14 +189,45 @@ footer h3{
     color: #00bfff;
     margin-bottom: 10px;
 }
-@media(max-width: 900px){
+@media (max-width: 900px){
 
-    .products{
-        flex-direction: column;
-        align-items: center;
+    .navbar{
+        height: auto;
+        padding: 15px;
     }
 
     .menu{
         gap: 15px;
+        padding-right: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .products-section h1{
+        font-size: 30px;
+    }
+
+    .search-box input{
+        width: 100%;
+    }
+
+    .product-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-box{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px){
+
+    .menu a{
+        display: block;
+        margin: 10px 0;
+    }
+
+    .product-grid{
+        grid-template-columns: 1fr;
     }
 }
