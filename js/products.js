@@ -3,37 +3,37 @@ let products = [
         name: "iPhone 15",
         category: "phone",
         price: "20.000.000đ",
-        image: "images/iphone.jpg"
+        image: "../images/iphone1.png"
     },
     {
         name: "Samsung S24",
         category: "phone",
         price: "18.000.000đ",
-        image: "images/samsung.jpg"
+        image: "../images/samsung1.png"
     },
     {
-        name: "MacBook Air",
+        name: "MacBook Pro",
         category: "laptop",
         price: "25.000.000đ",
-        image: "images/macbook.jpg"
+        image: "../images/MacBookpro.png"
     },
     {
-        name: "Dell XPS",
+        name: "Asus TUF",
         category: "laptop",
         price: "22.000.000đ",
-        image: "images/dell.jpg"
+        image: "../images/AsusTUF.png"
     },
     {
         name: "iPad Pro",
         category: "tablet",
         price: "17.000.000đ",
-        image: "images/ipad.jpg"
+        image: "../images/IpadProM4.png"
     },
     {
         name: "Apple Watch",
         category: "watch",
         price: "9.000.000đ",
-        image: "images/watch.jpg"
+        image: "../images/AppleWatch.png"
     }
 ];
 

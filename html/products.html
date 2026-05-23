@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html >
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XVT Shop - Products</title>
+    <title>XVT Shop - Trang chủ</title>
     <link rel="stylesheet" href="../css/products.css">
 </head>
 <body>
-
-    <!-- HEADER -->
     <header>
         <div class="navbar">
             <div class="logo">
@@ -25,11 +22,9 @@
         </div>
     </header>
 
-    <!-- PRODUCTS SECTION -->
     <section class="products-section">
         <h1>Danh sách sản phẩm</h1>
 
-        <!-- Search -->
         <div class="search-box">
             <input 
                 type="text" 
@@ -38,7 +33,6 @@
                 onkeyup="searchProducts()">
         </div>
 
-        <!-- Filter -->
         <div class="filter-buttons">
             <button onclick="filterProducts('all')">Tất cả</button>
             <button onclick="filterProducts('phone')">Điện thoại</button>
@@ -47,11 +41,9 @@
             <button onclick="filterProducts('watch')">Đồng hồ</button>
         </div>
 
-        <!-- Product list -->
         <div id="product-list" class="product-grid"></div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="footer-box">
             <p>📞 Hotline: 0123 456 789</p>
