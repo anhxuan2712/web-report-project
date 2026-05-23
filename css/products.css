@@ -160,10 +160,13 @@ footer {
 
     .navbar {
         flex-direction: column;
+        height: auto;
+        text-align: center;
     }
 
     .menu {
-        margin-top: 15px;
+        margin-top: 5px;
+         
     }
 }
 
@@ -178,7 +181,8 @@ footer {
 
     .menu a {
         display: block;
-        margin: 10px 0;
+        margin: 10px 10px;
+         text-align: center;
     }
 
     .footer-box {
