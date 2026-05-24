@@ -8,9 +8,12 @@
 body {
     background: #0f1117;
     color: white;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* HEADER */
 header {
     width: 100%;
     background: #090b10;
@@ -46,7 +49,6 @@ header {
     color: #00bfff;
 }
 
-/* CART */
 .cart-section {
     padding: 50px;
     text-align: center;
@@ -108,9 +110,8 @@ header {
     color: #00bfff;
 }
 
-/* FOOTER */
 footer {
-    margin-top: 50px;
+    margin-top: auto;
     background: #090b10;
     padding: 30px;
     text-align: center;
@@ -128,7 +129,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsive */
 @media (max-width: 900px){
 
     .menu{
