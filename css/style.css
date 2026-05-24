@@ -195,61 +195,18 @@ footer{
     justify-content: space-around;
     flex-wrap: wrap;
 }
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.copyright{
-    color: gray;
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-@media (max-width: 900px){
-
-    .navbar{
+    .navbar {
+        flex-direction: column;
         height: auto;
-        padding: 15px;
     }
 
-    .menu{
-        gap: 15px;
-        padding-right: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .title{
-        font-size: 30px;
-    }
-
-    .product{
-        width: 45%;
-    }
-
-    .footer-box{
-        flex-direction: column;
+    .menu {
+        margin-top: 15px;
     }
 }
 
-@media (max-width: 600px){
-
-    .menu a{
-        display: block;
-        margin: 10px 0;
-    }
-
-    .products{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product{
-        width: 80%;
-    }
-
-    .banner{
-        height: 250px;
-    }
-
-    .title{
-        font-size: 25px;
-    }
-}
