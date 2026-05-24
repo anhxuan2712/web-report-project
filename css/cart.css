@@ -107,24 +107,6 @@ header {
     margin-top: 30px;
     color: #00bfff;
 }
-<<<<<<< HEAD
-.checkout-btn{
-    margin-top: 25px;
-    padding: 14px 35px;
-    background: #00bfff;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.checkout-btn:hover{
-    background: #009acd;
-    transform: scale(1.05);
-}
-=======
 .nut{
     background-color: red;
     border-radius: 25px;
@@ -135,7 +117,6 @@ header {
    font-family: Arial;
 }
 
->>>>>>> 20cd8599f1dcf4e544c17dea86746cbc10d77490
 footer {
     margin-top: auto;
     background: #090b10;
