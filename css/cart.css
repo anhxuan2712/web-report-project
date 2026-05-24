@@ -12,7 +12,8 @@ body {
     display: flex;
     flex-direction: column;
 }
-header{
+
+header {
     width: 100%;
     background: #090b10;
 }
@@ -106,6 +107,7 @@ header{
     margin-top: 30px;
     color: #00bfff;
 }
+<<<<<<< HEAD
 .checkout-btn{
     margin-top: 25px;
     padding: 14px 35px;
@@ -122,6 +124,18 @@ header{
     background: #009acd;
     transform: scale(1.05);
 }
+=======
+.nut{
+    background-color: red;
+    border-radius: 25px;
+    color: white;
+    width: 300px;
+    height: 50px;
+    margin-top:50px;
+   font-family: Arial;
+}
+
+>>>>>>> 20cd8599f1dcf4e544c17dea86746cbc10d77490
 footer {
     margin-top: auto;
     background: #090b10;
