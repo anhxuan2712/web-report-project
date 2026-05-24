@@ -9,14 +9,12 @@ body {
     background: #0f1117;
     color: white;
 }
-
-/* HEADER */
-header {
+header{
     width: 100%;
     background: #090b10;
 }
-
-.navbar {
+.navbar{
+    height: 60px;
     width: 100%;
     background: #181c24;
     display: flex;
@@ -25,27 +23,26 @@ header {
     padding: 15px;
 }
 
-.logo img {
+.logo img{
     width: 100px;
 }
 
-.menu {
+.menu{
     display: flex;
     gap: 30px;
     padding-right: 50px;
 }
 
-.menu a {
+.menu a{
     text-decoration: none;
     color: white;
     transition: 0.3s;
 }
 
 .menu a:hover,
-.menu a.active {
+.menu a.active{
     color: #00bfff;
 }
-
 /* CART */
 .cart-section {
     padding: 50px;
