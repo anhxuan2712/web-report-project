@@ -1,9 +1,8 @@
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
 }
 
 body{
@@ -11,40 +10,42 @@ body{
     color: white;
 }
 
-.navbar{
+header{
     width: 100%;
+    background: #090b10;
+}
+.navbar{
     height: 60px;
+    width: 100%;
     background: #181c24;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    padding: 15px;
 }
 
 .logo img{
     width: 100px;
-    display: flex;
-    justify-content: left;
-    
-    
 }
 
 .menu{
     display: flex;
     gap: 30px;
+    padding-right: 50px;
 }
 
 .menu a{
     text-decoration: none;
     color: white;
-    font-size: 18px;
     transition: 0.3s;
 }
 
-.menu a:hover{
+.menu a:hover,
+.menu a.active{
     color: #00bfff;
 }
 
+/* BANNER */
 .banner{
     width: 100%;
     height: 500px;
@@ -57,17 +58,10 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
-
     top: 0;
     left: 0;
     opacity: 0;
     transition: opacity 1s ease;
-
-    opacity: 0;
-    transition: 1s;
-
-    transition: 0.5s;
-
 }
 
 .slide.active{
@@ -75,10 +69,11 @@ body{
     z-index: 1;
 }
 
-.slide img {
+.slide img{
     width: 100%;
     height: 100%;
 }
+
 .dots{
     position: absolute;
     bottom: 20px;
@@ -120,6 +115,7 @@ body{
     justify-content: center;
     gap: 30px;
     margin-bottom: 80px;
+    flex-wrap: wrap;
 }
 
 .product{
@@ -127,7 +123,7 @@ body{
     background: #1b2230;
     border-radius: 15px;
     overflow: hidden;
-    text-align: center;
+    text-align: left;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -135,24 +131,26 @@ body{
 .product img{
     width: 100%;
     height: auto;
-
     object-fit: cover;
 }
 
 .product h2{
     margin-top: 15px;
+    text-align: center;
 }
 
 .product p{
+    text-align: center;
     margin: 15px 0;
-    color:#00bfff;
+    color: #00bfff;
     font-size: 20px;
     font-weight: bold;
 }
 
 .product .p1{
-    color:red;
+    color: red;
 }
+
 .products:hover .product{
     opacity: 0.3;
     filter: brightness(40%);
@@ -185,26 +183,73 @@ body{
     color: #ddd;
 }
 
-footer {
-    width: 100%;
+footer{
+    margin-top: 50px;
     background: #090b10;
     padding: 30px;
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
 }
 
-footer h3{
-    color: #00bfff;
-    margin-bottom: 10px;
+.footer-box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-@media(max-width: 900px){
+
+.copyright{
+    color: gray;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px){
+
+    .navbar{
+        height: auto;
+        padding: 15px;
+    }
+
+    .menu{
+        gap: 15px;
+        padding-right: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+
+    .product{
+        width: 45%;
+    }
+
+    .footer-box{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px){
+
+    .menu a{
+        display: block;
+        margin: 10px 0;
+    }
 
     .products{
         flex-direction: column;
         align-items: center;
     }
 
-    .menu{
-        gap: 15px;
+    .product{
+        width: 80%;
+    }
+
+    .banner{
+        height: 250px;
+    }
+
+    .title{
+        font-size: 25px;
     }
 }
