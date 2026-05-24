@@ -85,5 +85,5 @@ function themVaoGio(tenSanPham) {
     alert("Đã thêm vào giỏ hàng");
 }
 
-// Khi mở web
+
 HienThi(SanPham);
