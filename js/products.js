@@ -10,6 +10,7 @@ let SanPham = [
 
 let LoaiDangChon = "all";
 
+// Hiển thị sản phẩm
 function HienThi(ds) {
     let box = document.getElementById("product-list");
     box.innerHTML = "";
@@ -24,17 +25,21 @@ function HienThi(ds) {
         '<div class="product-card">' +
             '<img src="' + ds[i].anh + '">' +
             '<h3>' + ds[i].ten + '</h3>' +
-            '<p>' + ds[i].gia + '</p>' +
-            '<button>Add to Cart</button>' +
+            '<p>Màn: ' + ds[i].man + '</p>' +
+            '<p>Pin: ' + ds[i].pin + '</p>' +
+            '<p>Giá: ' + ds[i].gia + '</p>' +
+            '<button onclick="themVaoGio(\'' + ds[i].ten + '\')">Add to Cart</button>' +
         '</div>';
     }
 }
 
+// Filter
 function filterProducts(loai) {
     LoaiDangChon = loai;
-    HienThi(SanPham);
+    searchProducts();
 }
 
+// Search + Filter
 function searchProducts() {
     let tuKhoa = document.getElementById("searchBox").value.toLowerCase();
     let KetQua = [];
@@ -50,4 +55,22 @@ function searchProducts() {
 
     HienThi(KetQua);
 }
+
+// Add to Cart
+function themVaoGio(tenSanPham) {
+    let gioHang = JSON.parse(localStorage.getItem("gioHang")) || [];
+
+    for (let i = 0; i < SanPham.length; i++) {
+        if (SanPham[i].ten == tenSanPham) {
+            gioHang.push(SanPham[i]);
+            break;
+        }
+    }
+
+    localStorage.setItem("gioHang", JSON.stringify(gioHang));
+
+    alert("Đã thêm vào giỏ hàng");
+}
+
+
 HienThi(SanPham);
