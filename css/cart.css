@@ -8,6 +8,9 @@
 body {
     background: #0f1117;
     color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 header{
     width: 100%;
@@ -43,7 +46,6 @@ header{
 .menu a.active{
     color: #00bfff;
 }
-/* CART */
 .cart-section {
     padding: 50px;
     text-align: center;
@@ -104,10 +106,8 @@ header{
     margin-top: 30px;
     color: #00bfff;
 }
-
-/* FOOTER */
 footer {
-    margin-top: 50px;
+    margin-top: auto;
     background: #090b10;
     padding: 30px;
     text-align: center;
@@ -124,9 +124,12 @@ footer {
     font-size: 16px;
     margin-top: 20px;
 }
-
-/* Responsive */
 @media (max-width: 900px){
+
+    .navbar{
+        height: auto;
+        padding: 15px;
+    }
 
     .menu{
         gap: 15px;
@@ -135,25 +138,39 @@ footer {
         justify-content: center;
     }
 
-    .cart-item{
-        flex-direction: column;
-        text-align: center;
+    .title{
+        font-size: 30px;
     }
 
-    .cart-info{
-        text-align: center;
-        margin: 15px 0;
+    .product{
+        width: 45%;
     }
 
     .footer-box{
         flex-direction: column;
     }
 }
-
 @media (max-width: 600px){
 
     .menu a{
         display: block;
         margin: 10px 0;
+    }
+
+    .products{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product{
+        width: 80%;
+    }
+
+    .banner{
+        height: 250px;
+    }
+
+    .title{
+        font-size: 25px;
     }
 }
