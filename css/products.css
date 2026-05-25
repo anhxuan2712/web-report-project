@@ -158,15 +158,20 @@ footer {
         padding: 15px;
     }
 
-    .menu{
-        gap: 15px;
-        padding-right: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .navbar {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .products-section h1{
-        font-size: 30px;
+    .menu {
+        margin-top: 5px;
+         
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
     }
 
     .search-box input{
@@ -186,7 +191,8 @@ footer {
 
     .menu a{
         display: block;
-        margin: 10px 0;
+        margin: 10px 10px;
+         text-align: center;
     }
 
     .product-grid{

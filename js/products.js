@@ -23,7 +23,6 @@ let SanPham = [
 
 let LoaiDangChon = "all";
 
-// Hiển thị sản phẩm
 function HienThi(ds) {
     let box = document.getElementById("product-list");
     box.innerHTML = "";
@@ -46,13 +45,11 @@ function HienThi(ds) {
     }
 }
 
-// Filter
 function filterProducts(loai) {
     LoaiDangChon = loai;
     searchProducts();
 }
 
-// Search + Filter
 function searchProducts() {
     let tuKhoa = document.getElementById("searchBox").value.toLowerCase();
     let KetQua = [];
@@ -69,7 +66,6 @@ function searchProducts() {
     HienThi(KetQua);
 }
 
-// Add to Cart
 function themVaoGio(tenSanPham) {
     let gioHang = JSON.parse(localStorage.getItem("gioHang")) || [];
 
