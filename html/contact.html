@@ -1,7 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="vi">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XVT Shop</title>
+    <title>XVT Shop - Liên Hệ</title>
     <link rel="stylesheet" href="../css/contact.css">
 </head>
 <body>
@@ -22,30 +24,32 @@
         </div>
     </header>
 
-<section class="contact">
-        <h1>Liên Hệ Với Chúng Tôi</h1>
-        <p>Nếu bạn có thắc mắc, hãy gửi thông tin cho chúng tôi.</p>
+    <main>
+        <section class="contact">
+            <h1>Liên Hệ Với Chúng Tôi</h1>
+            <p>Nếu bạn có thắc mắc, hãy gửi thông tin cho chúng tôi.</p>
 
-        <form class="contact-form">
-            <div class="input-box">
-                <input type="text" placeholder="Họ và tên" required>
-            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="input-box">
+                    <input type="text" id="fullname" placeholder="Họ và tên" required>
+                </div>
 
-            <div class="input-box">
-                <input type="email" placeholder="Email" required>
-            </div>
+                <div class="input-box">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
 
-            <div class="input-box">
-                <input type="text" placeholder="Số điện thoại">
-            </div>
+                <div class="input-box">
+                    <input type="text" id="phone" placeholder="Số điện thoại" required>
+                </div>
 
-            <div class="input-box">
-                <textarea placeholder="Nội dung liên hệ" required></textarea>
-            </div>
+                <div class="input-box">
+                    <textarea id="message" placeholder="Nội dung liên hệ" required></textarea>
+                </div>
 
-            <button type="submit">Gửi liên hệ</button>
-        </form>
-    </section>
+                <button type="submit">Gửi liên hệ</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-box">
@@ -57,7 +61,6 @@
         <p class="copyright">© 2026 XVT Shop. All rights reserved.</p>
     </footer>
 
-    <script src="../js/products.js"></script>
-
+    <script src="../js/contact.js"></script>
 </body>
 </html>

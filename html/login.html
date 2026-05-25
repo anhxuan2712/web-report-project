@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
+
     <header>
         <div class="navbar">
             <div class="logo">
@@ -23,35 +24,37 @@
         </div>
     </header>
 
-    <section class="login">
-        <h1>Đăng Nhập</h1>
-        <p>Vui lòng nhập thông tin tài khoản</p>
+    <main>
+        <section class="login">
+            <h1>Đăng Nhập</h1>
+            <p>Vui lòng nhập thông tin tài khoản</p>
 
-        <form class="login-form">
-            <div class="input-box">
-                <input type="text" placeholder="Tên đăng nhập hoặc Email" required>
-            </div>
+            <form class="login-form" id="loginForm">
+                <div class="input-box">
+                    <input type="text" id="username" placeholder="Tên đăng nhập hoặc Email" required>
+                </div>
 
-            <div class="input-box">
-                <input type="password" placeholder="Mật khẩu" required>
-            </div>
+                <div class="input-box">
+                    <input type="password" id="password" placeholder="Mật khẩu" required>
+                </div>
 
-            <div class="options">
-                <label>
-                    <input type="checkbox"> Ghi nhớ đăng nhập
-                </label>
-                <a href="#">Quên mật khẩu?</a>
-            </div>
+                <div class="options">
+                    <label>
+                        <input type="checkbox"> Ghi nhớ đăng nhập
+                    </label>
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
 
-            <button type="submit">Đăng Nhập</button>
+                <button type="submit">Đăng Nhập</button>
 
-            <p class="register-link">
-                Chưa có tài khoản? <a href="#">Đăng ký</a>
-            </p>
-        </form>
-    </section>
+                <p class="register-link">
+                    Chưa có tài khoản? <a href="register.html">Đăng ký</a>
+                </p>
+            </form>
+        </section>
+    </main>
 
-        <footer>
+    <footer>
         <div class="footer-box">
             <p>📞 Hotline: 0123 456 789</p>
             <p>📍 Địa chỉ: số 235 Hoàng Quốc Việt, phường Nghĩa Đô, Hà Nội</p>
@@ -60,5 +63,7 @@
         </div>
         <p class="copyright">© 2026 XVT Shop. All rights reserved.</p>
     </footer>
+    <script src="../js/login.js"></script>
+
 </body>
 </html>
