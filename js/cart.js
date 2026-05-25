@@ -39,3 +39,6 @@ function xoaSanPham(index) {
 }
 
 hienThiGioHang();
+document.getElementById("checkoutBtn").addEventListener("click", function(){
+    alert("Thanh toán thành công!");
+});
