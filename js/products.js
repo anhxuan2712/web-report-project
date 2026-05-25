@@ -84,6 +84,4 @@ function themVaoGio(tenSanPham) {
 
     alert("Đã thêm vào giỏ hàng");
 }
-
-
 HienThi(SanPham);
