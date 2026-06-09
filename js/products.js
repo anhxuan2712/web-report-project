@@ -17,67 +17,36 @@ let SanPham = [
     { ten: "Samsung Galaxy Tab S9 Ultra", man:'14.6" AMOLED 120Hz', pin:"30Wh", loai: "tablet", gia: "11.000.000đ", anh: "../images/SamsungGalaxyTab.png" },
     { ten: "HUAWEI Watch GT 5 Pro", man:'AMOLED 1.43"', pin:"524mAh", loai: "watch", gia: "13.600.000đ", anh: "../images/WatchHUAWEI.png" },
     { ten: "Samsung Galaxy Watch Ultra", man:'1.5" AMOLED', pin:"590mAh", loai: "watch", gia: "13.999.000đ", anh: "../images/WatchSamsung.png" },
-    { ten: "Xiaomi 15 Ultra", man:'6.73" AMOLED 120Hz', pin:"6000mAh", loai: "phone", gia: "50.000.000đ", anh: "../images/xiaomi1.png" },
+    { ten: "Xiaomi 15 Ultra", man:'6.73"s AMOLED 120Hz', pin:"6000mAh", loai: "phone", gia: "50.000.000đ", anh: "../images/xiaomi1.png" },
     { ten: "Xiaomi Pad", man:'11" FHD+', pin:"840mAh", loai: "tablet", gia: "16.110.000đ", anh: "../images/XiaomiPad.png" }
 ];
-
-let LoaiDangChon = "all";
-
 function HienThi(ds) {
     let box = document.getElementById("product-list");
     box.innerHTML = "";
-
     if (ds.length == 0) {
         box.innerHTML = "<h2>Không có sản phẩm</h2>";
         return;
     }
-
     for (let i = 0; i < ds.length; i++) {
         box.innerHTML +=
         '<div class="product-card">' +
-            '<img src="' + ds[i].anh + '">' +
-            '<h3>' + ds[i].ten + '</h3>' +
-            '<p>Màn: ' + ds[i].man + '</p>' +
-            '<p>Pin: ' + ds[i].pin + '</p>' +
-            '<p>Giá: ' + ds[i].gia + '</p>' +
-            '<button onclick="themVaoGio(\'' + ds[i].ten + '\')">Add to Cart</button>' +
+            '<img src="' + ds[i].anh + '">'+
+            '<h3>' + ds[i].ten + '</h3>'+
+            '<p>Màn: ' + ds[i].man + '</p>'+
+            '<p>Pin: ' + ds[i].pin + '</p>'+
+            '<p>Giá: ' + ds[i].gia + '</p>'+
+            '<button>Xem chi tiết</button>'+
         '</div>';
     }
 }
-
-function filterProducts(loai) {
-    LoaiDangChon = loai;
-    searchProducts();
-}
-
-function searchProducts() {
+function TimSanPham() {
     let tuKhoa = document.getElementById("searchBox").value.toLowerCase();
     let KetQua = [];
-
     for (let i = 0; i < SanPham.length; i++) {
-        if (
-            SanPham[i].ten.toLowerCase().includes(tuKhoa) &&
-            (LoaiDangChon == "all" || SanPham[i].loai == LoaiDangChon)
-        ) {
+        if (SanPham[i].ten.toLowerCase().includes(tuKhoa)) {
             KetQua.push(SanPham[i]);
         }
     }
-
     HienThi(KetQua);
-}
-
-function themVaoGio(tenSanPham) {
-    let gioHang = JSON.parse(localStorage.getItem("gioHang")) || [];
-
-    for (let i = 0; i < SanPham.length; i++) {
-        if (SanPham[i].ten == tenSanPham) {
-            gioHang.push(SanPham[i]);
-            break;
-        }
-    }
-
-    localStorage.setItem("gioHang", JSON.stringify(gioHang));
-
-    alert("Đã thêm vào giỏ hàng");
 }
 HienThi(SanPham);

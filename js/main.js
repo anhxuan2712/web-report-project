@@ -1,42 +1,26 @@
-let slides = document.querySelectorAll(".slide");
-let dots = document.querySelectorAll(".dot");
-
-let index = 0;
-
-function showSlide(i){
-
-    slides.forEach(function(slide){
-        slide.classList.remove("active");
+let slide = document.querySelectorAll(".slide");
+let cham = document.querySelectorAll(".dot");
+let vitri = 0;
+function chuyenSlide(i){
+    slide.forEach(function(s){
+        s.classList.remove("active");
     });
-
-    dots.forEach(function(dot){
-        dot.classList.remove("active");
+    cham.forEach(function(c){
+        c.classList.remove("active");
     });
-
-    slides[i].classList.add("active");
-    dots[i].classList.add("active");
-
-    index = i;
+    slide[i].classList.add("active");
+    cham[i].classList.add("active");
+    vitri = i;
 }
-
 setInterval(function(){
-
-    index++;
-
-    if(index >= slides.length){
-        index = 0;
+    vitri++;
+    if(vitri >= slide.length){
+        vitri = 0;
     }
-
-    showSlide(index);
-
-},3000);
-
-dots.forEach(function(dot, i){
-
-    dot.addEventListener("click", function(){
-
-        showSlide(i);
-
+    chuyenSlide(vitri);
+}, 3000);
+cham.forEach(function(c, i){
+    c.addEventListener("click", function(){
+        chuyenSlide(i);
     });
-
 });

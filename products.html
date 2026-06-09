@@ -1,37 +1,35 @@
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XVT Shop</title>
-    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/products.css">
 </head>
 <body>
-
     <header>
         <div class="navbar">
             <div class="logo">
                 <img src="../images/logo.png" alt="XVT Shop Logo">
             </div>
-
             <div class="menu">
                 <a href="index.html">Trang chủ</a>
-                <a href="products.html">Sản phẩm</a>
+                <a href="products.html" class="active">Sản phẩm</a>
                 <a href="contact.html">Liên hệ</a>
-                <a href="cart.html" class="active">Giỏ hàng</a>
+                <a href="cart.html">Giỏ hàng</a>
                 <a href="login.html">Đăng nhập</a>
             </div>
         </div>
     </header>
-
-    <section class="cart-section">
-        <h1>Giỏ hàng của bạn</h1>
-
-        <div id="cart-list" class="cart-list"></div>
-
-        <h2 id="total-price">Tổng tiền: 0đ</h2>
-        <button class="nut" id="checkoutBtn"><b><h3>THANH TOÁN</h3></b></button>
+    <section class="products-section">
+        <h1>Danh sách sản phẩm</h1>
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="searchBox" 
+                placeholder="Tìm kiếm sản phẩm..." 
+                onkeyup="TimSanPham()">
+        </div>
+        <div id="product-list" class="product-grid"></div>
     </section>
-
     <footer>
         <div class="footer-box">
             <p>📞 Hotline: 0123 456 789</p>
@@ -39,10 +37,8 @@
             <p>📧 Email: xvtshop@gmail.com</p>
             <p>🌐 Facebook: XVT Shop</p>
         </div>
-        <p class="copyright">© 2026 XVT Shop. All rights reserved.</p>
+        <p class="gioithieu">© 2026 XVT Shop. All rights reserved.</p>
     </footer>
-
-    <script src="../js/cart.js"></script>
-
+    <script src="../js/products.js"></script>
 </body>
 </html>
