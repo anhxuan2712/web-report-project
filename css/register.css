@@ -115,12 +115,13 @@ main{
 }
 
 .login-link a{
-    color: #00bcd4;
+    color: #4f5d5f;
     text-decoration: none;
 }
 
 .login-link a:hover{
     text-decoration: underline;
+    color: #00bfff;
 }
 
 footer{

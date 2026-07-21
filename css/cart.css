@@ -1,10 +1,9 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 0; 
     box-sizing: border-box;
     font-family: Arial;
 }
-
 body {
     background: #0f1117;
     color: white;
@@ -12,9 +11,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 header {
-    width: 100%;
     background: #090b10;
 }
 .navbar{
@@ -26,23 +23,19 @@ header {
     align-items: center;
     padding: 15px;
 }
-
 .logo img{
     width: 100px;
 }
-
 .menu{
     display: flex;
     gap: 30px;
     padding-right: 50px;
 }
-
 .menu a{
     text-decoration: none;
     color: white;
     transition: 0.3s;
 }
-
 .menu a:hover,
 .menu a.active{
     color: #00bfff;
@@ -51,7 +44,6 @@ header {
     padding: 50px;
     text-align: center;
 }
-
 .cart-section h1 {
     margin-bottom: 30px;
     font-size: 40px;
@@ -62,7 +54,6 @@ header {
     margin-top: 30px;
     color: #00bfff;
 }
-
 .nut{
     background-color: red;
     border-radius: 25px;
@@ -81,19 +72,16 @@ footer {
     padding: 30px;
     text-align: center;
 }
-
 .footer-box {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-}
 
+}
 .gioithieu {
     color: gray;
     font-size: 16px;
     margin-top: 20px;
 }
-
 @media (max-width: 992px) {
     .navbar {
         flex-direction: column;
